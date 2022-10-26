@@ -6,12 +6,16 @@ repositories {
         dirs 'src/main/libs'
     }
 }
+
+
 android {
     packagingOptions {
         doNotStrip "**/libclisitef.so"
     }
 }
+
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:design:28.0.0'
 
@@ -24,7 +28,6 @@ dependencies {
     implementation(name: 'LibIsoClisitef',ext: 'aar')
     implementation(name: 'clisitef-android',ext: 'jar')
     implementation(name: 'libgedi-1.16.8-gpos700-payment-release',ext: 'aar')
-
 
 
 
