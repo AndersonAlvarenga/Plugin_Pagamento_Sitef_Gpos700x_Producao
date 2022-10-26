@@ -1,1 +1,1 @@
-Projeto GertecOneFramework GPOS 700# Plugin_Pagamento_Sitef_Gpos700x_Producao
+Projeto GertecOneFramework GPOS 700
