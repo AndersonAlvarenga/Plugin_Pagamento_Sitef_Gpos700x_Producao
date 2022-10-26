@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-gpos7centos",
+  "version": "0.0.2",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-gpos7centos",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC"
+}
