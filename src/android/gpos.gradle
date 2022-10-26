@@ -6,14 +6,11 @@ repositories {
         dirs 'src/main/libs'
     }
 }
-
-
 android {
     packagingOptions {
         doNotStrip "**/libclisitef.so"
     }
 }
-
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
