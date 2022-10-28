@@ -1,0 +1,35 @@
+// Enable local dependencies repository
+repositories {
+    google()
+    jcenter()
+    flatDir {
+        dirs 'src/main/libs'
+    }
+}
+
+
+android {
+    packagingOptions {
+        doNotStrip "**/libclisitef.so"
+        
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:design:28.0.0'
+
+    // Lib para código de barras
+    implementation ('com.journeyapps:zxing-android-embedded:3.4.0')
+    implementation 'com.google.zxing:core:3.2.0'
+    
+    // Lib exclusiva para o GPOS700
+    implementation(name: 'ppcomp_1.30.3-release',ext: 'jar')
+    implementation(name: 'LibIsoClisitef',ext: 'aar')
+    implementation(name: 'clisitef-android',ext: 'jar')
+    implementation(name: 'libgedi-1.16.8-gpos700-payment-release',ext: 'aar')
+
+
+
+}
