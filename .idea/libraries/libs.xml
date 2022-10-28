@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/android/libs/clisitef-android.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/android/libs/ppcomp_1.30.3-release.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
