@@ -13,6 +13,7 @@
             window.cordova.plugins.NomeDoPlugin -->
     </js-module>
 
+
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <!-- The service name should match the one used in the JavaScript exec call, and the value is the Java classes full name, including the namespace. 
