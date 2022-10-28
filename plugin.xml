@@ -11,6 +11,7 @@
         <clobbers target="cordova.plugins.gpos7centos" />
         <!-- posso ter quantos clobbers eu quiser, pode ser instalado no objeto window e ser chamado atraves de 
             window.cordova.plugins.NomeDoPlugin -->
+            
     </js-module>
 
 
