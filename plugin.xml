@@ -34,7 +34,6 @@
         <source-file src="src/android/com/plugin/Led.java" target-dir="src/android/com/plugin" />
         <source-file src="src/android/com/plugin/Printer.java" target-dir="src/android/com/plugin" />
 
-
         <config-file parent="/*" mode="merge" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.CAMERA" />
             <uses-feature android:name="android.hardware.camera" />
