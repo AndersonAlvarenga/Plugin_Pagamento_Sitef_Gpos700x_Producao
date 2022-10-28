@@ -43,7 +43,7 @@
         <!-- <config-file parent="/*" target="AndroidManifest.xml"></config-file> -->
         <framework src="src/android/gpos.gradle" custom="true" type="gradleReference" />
         <resource-file src="src/android/libs/ppcomp_1.30.3-release.jar" target="libs/ppcomp_1.30.3-release.jar" />
-        <resource-file src="src/android/libs/LibIsoClisitef.aar" target="libs/LibIsoClisitef.aar" />
+       <!-- <resource-file src="src/android/libs/LibIsoClisitef.aar" target="libs/LibIsoClisitef.aar" /> -->
         <resource-file src="src/android/libs/clisitef-android.jar" target="libs/clisitef-android.jar" />
         <resource-file src="src/android/libs/libgedi-1.16.8-gpos700-payment-release.aar" target="libs/libgedi-1.16.8-gpos700-payment-release.aar" />
 
