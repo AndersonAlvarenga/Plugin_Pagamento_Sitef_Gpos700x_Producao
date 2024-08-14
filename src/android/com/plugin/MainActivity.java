@@ -85,6 +85,7 @@ public class MainActivity extends CordovaPlugin implements ICliSiTefListener{
     //Variaveis configuração servidor
     //-------------------------------
     private String confIpSitef;
+    private int confModalidade;
     private String confCodigoLoja;
     private String confNumeroTerminal;
     //-------------------------------
@@ -123,6 +124,7 @@ public class MainActivity extends CordovaPlugin implements ICliSiTefListener{
     private String modalidade;
     private boolean isCancelado;
     private boolean isSolicitadoRemoverCartao;
+    private String codigoPix;
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
@@ -157,6 +159,7 @@ public class MainActivity extends CordovaPlugin implements ICliSiTefListener{
             this.startHorario = params.getString("horario");
             this.startOperador = params.getString("operador");
             this.contFormaPagamento = params.getString("formaPagamento");
+            this.confModalidade = params.getInt("modalidade");//0 para debito e credito, 122 para pix
             this.isCancelado = false;
             this.isSolicitadoRemoverCartao = false;
             new Thread(() -> {
@@ -218,7 +221,7 @@ public class MainActivity extends CordovaPlugin implements ICliSiTefListener{
                     this.cliSiTef.setActivity(cordova.getActivity());
                     retornoStartTransaction = this.cliSiTef.startTransaction(
                             this,
-                            0,
+                            this.confModalidade,
                             this.startValor,
                             this.startCupomFiscal,
                             this.startDataFiscal,
@@ -324,6 +327,7 @@ public class MainActivity extends CordovaPlugin implements ICliSiTefListener{
             jo.put("nomeInstituicao", this.nomeInstituicao);
             jo.put("codigoEstabelecimento", this.codigoEstabelecimento);
             jo.put("modalidade", this.modalidade);
+            jo.put("codigoPix",this.codigoPix);
 
             callbackContext.success(jo);
             return true;
@@ -659,6 +663,9 @@ public class MainActivity extends CordovaPlugin implements ICliSiTefListener{
                     break;
                 case 101:
                     this.modalidade = this.cliSiTef.getBuffer();
+                    break;
+                case 584:
+                    this.codigoPix = this.cliSiTef.getBuffer();
                     break;
                 default:
                     break;
