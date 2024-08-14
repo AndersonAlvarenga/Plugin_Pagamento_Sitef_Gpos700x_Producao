@@ -734,7 +734,7 @@ public class MainActivity extends CordovaPlugin implements ICliSiTefListener{
                         this.cliSiTef.continueTransaction(data);
                         break;
                     case "1:PIX;2:Pix Saque;3:Pix Troco;":
-                        data = this.contFormaPagamento
+                        data = this.contFormaPagamento;
                         this.cliSiTef.continueTransaction(data);
                         break;
                     default:
