@@ -14,8 +14,9 @@ import android.widget.Toast;
 import static android.app.Activity.RESULT_OK;
 import static android.app.Activity.RESULT_CANCELED;
 
+/*
 import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
+import com.google.zxing.integration.android.IntentResult;*/
 
 import java.util.List;
 import java.util.ArrayList;
